@@ -1,0 +1,98 @@
+/* ==========================================================================
+   base.css: variables, reset y estilos de etiquetas básicas
+   Aquí NO van clases de componentes.
+   ========================================================================== */
+
+/* 1. Variables ------------------------------------------------------------ */
+:root {
+  /* Color */
+  --color-bg: #0B0D10;
+  --color-text: #EDEDE8;
+  --color-text-muted: #8A8F98;
+  --color-accent: #C6FF3D;
+  --color-line: rgba(237, 237, 232, 0.15);
+
+  /* Tipografía */
+  --font-display: "Archivo", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  /* Escala de texto */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.25rem, 2vw, 1.75rem);
+  --text-xl: clamp(2rem, 5vw, 4rem);
+  --text-hero: clamp(2rem, 9vw, 8rem);
+
+  /* Espaciado */
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --space-section: clamp(4rem, 10vw, 8rem);
+
+  /* Layout */
+  --container: 1200px;
+}
+
+/* 2. Reset mínimo --------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* 3. Estilos de etiquetas ------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
