@@ -1,5 +1,12 @@
 # VOID/FRAME
 
-Fictional VFX studio website built with vanilla HTML, CSS and JavaScript.
+A fictional VFX studio website, built with React and Vite.
 
 Work in progress.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+```
