@@ -37,3 +37,56 @@
 .nav__link:hover {
   color: var(--color-accent);
 }
+
+.hero__title {
+  font-size: var(--text-hero);
+  color: var(--color-accent);
+}
+
+.hero__tagline {
+  margin-block: var(--space-md) var(--space-lg);
+  color: var(--color-text-muted);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.hero__panel {
+  position: relative;
+  min-height: 18rem;
+  background: var(--color-bg);
+}
+
+.hero__panel--1 { background: #1C2430; }
+.hero__panel--2 { background: #2A1A1A; }
+.hero__panel--3 { background: #1A2420; }
+
+.hero__caption {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  background: var(--color-bg);
+}
+
+.hero__category {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.hero__name {
+  font-size: var(--text-base);
+}
