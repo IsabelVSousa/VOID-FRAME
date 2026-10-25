@@ -1,7 +1,11 @@
+import hero1 from '../assets/images/hero-1.jpg'
+import hero2 from '../assets/images/hero-2.jpg'
+import hero3 from '../assets/images/hero-3.jpg'
+
 const panels = [
-  { id: 1, title: 'Hollow Reach', category: 'Concept art' },
-  { id: 2, title: 'Signal Garden', category: 'Environment' },
-  { id: 3, title: 'Ash Wardens', category: 'Character' },
+  { id: 1, title: 'Hollow Reach', category: 'Concept art', src: hero1, alt: 'Describe la imagen 1' },
+  { id: 2, title: 'Signal Garden', category: 'Environment', src: hero2, alt: 'Describe la imagen 2' },
+  { id: 3, title: 'Ash Wardens', category: 'Character', src: hero3, alt: 'Describe la imagen 3' },
 ]
 
 const TITLE = [
@@ -41,6 +45,7 @@ function Hero() {
       <div className="hero__panels">
         {panels.map((panel) => (
           <figure key={panel.id} className={`hero__panel hero__panel--${panel.id}`}>
+            <img className="hero__image" src={panel.src} alt={panel.alt} />
             <figcaption className="hero__caption">
               <span className="hero__category">{panel.category}</span>
               <span className="hero__name">{panel.title}</span>
