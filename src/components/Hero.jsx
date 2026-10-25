@@ -2,6 +2,10 @@ import hero1 from '../assets/images/hero-1.jpg'
 import hero2 from '../assets/images/hero-2.jpg'
 import hero3 from '../assets/images/hero-3.jpg'
 
+function pad(n) {
+  return String(n).padStart(2, '0')
+}
+
 const panels = [
   { id: 1, title: 'Hollow Reach', category: 'Concept art', src: hero1, alt: 'Describe la imagen 1' },
   { id: 2, title: 'Signal Garden', category: 'Environment', src: hero2, alt: 'Describe la imagen 2' },
@@ -52,6 +56,27 @@ function Hero() {
             </figcaption>
           </figure>
         ))}
+      </div>
+      <div className="hero__bar">
+        <p className="hero__counter">
+          {pad(panels.length)} projects
+        </p>
+
+        <p className="hero__bar-label">Personal projects</p>
+
+        <a
+          className="hero__globe"
+          href="https://github.com/IsabelVSousa/VOID-FRAME"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View source code on GitHub"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" />
+            <ellipse cx="12" cy="12" rx="4" ry="10" />
+            <path d="M2 12h20M4.5 6.5h15M4.5 17.5h15" />
+          </svg>
+        </a>
       </div>
     </section>
   )
