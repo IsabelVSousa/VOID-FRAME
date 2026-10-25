@@ -8,6 +8,7 @@ function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="hero__intro">
+        <p className="hero__eyebrow">Welcome to</p>
         <h1 className="hero__title">VOID/FRAME</h1>
         <p className="hero__tagline">Digital experiences for imaginary worlds.</p>
         <a className="button" href="#work">Explore work</a>
