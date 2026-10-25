@@ -15,6 +15,7 @@
   /* Tipografía */
   --font-display: "Archivo", sans-serif;
   --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "Share Tech Mono", monospace;
 
   /* Escala de texto */
   --text-sm: 0.875rem;
