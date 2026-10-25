@@ -21,7 +21,7 @@
   --text-base: 1rem;
   --text-lg: clamp(1.25rem, 2vw, 1.75rem);
   --text-xl: clamp(2rem, 5vw, 4rem);
-  --text-hero: clamp(2rem, 9vw, 8rem);
+  --text-hero: clamp(2rem, 10.5vw, 13rem);
 
   /* Espaciado */
   --space-sm: 0.5rem;
