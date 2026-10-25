@@ -4,12 +4,36 @@ const panels = [
   { id: 3, title: 'Ash Wardens', category: 'Character' },
 ]
 
+const TITLE = [
+  { char: 'V', kern: 0 },
+  { char: 'O', kern: 0 },
+  { char: 'I', kern: 0 },
+  { char: 'D', kern: 0 },
+  { char: '/', kern: 0 },
+  { char: 'F', kern: 0 },
+  { char: 'R', kern: 0 },
+  { char: 'A', kern: 0 },
+  { char: 'M', kern: 0 },
+  { char: 'E', kern: 0 },
+]
+
 function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="hero__intro">
-        <p className="hero__eyebrow">Welcome to</p>
-        <h1 className="hero__title">VOID/FRAME</h1>
+        {/* <p className="hero__eyebrow">Welcome to</p> */}
+        <h1 className="hero__title" aria-label="VOID/FRAME">
+          {TITLE.map((letter, i) => (
+            <span
+              key={i}
+              className="hero__letter"
+              aria-hidden="true"
+              style={{ marginLeft: `${letter.kern}em` }}
+            >
+              {letter.char}
+            </span>
+          ))}
+        </h1>
         <p className="hero__tagline">Digital experiences for imaginary worlds.</p>
         <a className="button" href="#work">Explore work</a>
       </div>

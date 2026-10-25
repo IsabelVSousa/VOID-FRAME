@@ -21,5 +21,5 @@
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: 1fr 1.25fr 1fr;
+  grid-template-columns: var(--hero-columns);
 }
