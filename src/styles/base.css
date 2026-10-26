@@ -37,7 +37,7 @@
   /* Layout */
   --container: 1200px;
   --hero-columns: 1fr 1.25fr 1fr;
-  --bar-height: 4rem;
+  --bar-height: 2.75rem;
 }
 
 /* 2. Reset mínimo --------------------------------------------------------- */

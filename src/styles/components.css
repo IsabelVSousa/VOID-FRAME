@@ -9,8 +9,9 @@
 .site-header__inner {
   display: grid;
   grid-template-columns: var(--hero-columns);
-  align-items: center;
+  align-items: baseline;
   padding-block: var(--space-md);
+  line-height: 1.25;
 }
 
 .site-header__logo {
@@ -106,6 +107,7 @@
   font-size: var(--text-hero);
   font-stretch: 105%;
   letter-spacing: 0;
+  line-height: 0.95;
   color: var(--color-accent);
   text-shadow: 0 0 0.12em rgba(198, 255, 61, 0.35);
 }
@@ -125,7 +127,7 @@
 
 .hero__tagline {
   font-size: var(--text-lead);
-  margin-block: 0.8em 1.2em;
+  margin-block: 0.1em 1.5em;
   color: var(--color-accent);
 }
 
@@ -179,7 +181,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  padding: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
   color: var(--color-accent);
 }
 
@@ -223,6 +225,6 @@
 }
 
 .hero__globe svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }

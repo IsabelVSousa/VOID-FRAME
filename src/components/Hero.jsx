@@ -43,7 +43,7 @@ function Hero() {
           ))}
         </h1>
         <p className="hero__tagline">Digital experiences for imaginary worlds.</p>
-        <a className="button" href="#work">Explore work</a>
+        {/* <a className="button" href="#work">Explore work</a> */}
       </div>
 
       <div className="hero__panels">
