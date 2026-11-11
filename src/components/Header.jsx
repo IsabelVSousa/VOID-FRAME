@@ -1,6 +1,18 @@
+import { useState, useEffect } from 'react'
 import DateStamp from './DateStamp'
 
 function Header() {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (!open) return
+    function handleKey(event) {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    document.addEventListener('keydown', handleKey)
+    return () => document.removeEventListener('keydown', handleKey)
+  }, [open])
+
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -16,11 +28,25 @@ function Header() {
           <span className="terminal__cursor" aria-hidden="true"></span>
         </a>
 
-        <nav aria-label="Main navigation">
+        <button
+          className="nav-toggle"
+          type="button"
+          aria-expanded={open}
+          aria-controls="main-nav"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? 'Close' : 'Menu'}
+        </button>
+
+        <nav
+          id="main-nav"
+          className={`nav ${open ? 'is-open' : ''}`}
+          aria-label="Main navigation"
+        >
           <ul className="nav__list">
-            <li><a className="nav__link" href="#work">Work</a></li>
-            <li><a className="nav__link" href="#about">About</a></li>
-            <li><a className="nav__link" href="#contact">Contact</a></li>
+            <li><a className="nav__link" href="#work" onClick={() => setOpen(false)}>Work</a></li>
+            <li><a className="nav__link" href="#about" onClick={() => setOpen(false)}>About</a></li>
+            <li><a className="nav__link" href="#contact" onClick={() => setOpen(false)}>Contact</a></li>
           </ul>
         </nav>
 

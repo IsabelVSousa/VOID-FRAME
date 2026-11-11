@@ -23,3 +23,19 @@
   display: grid;
   grid-template-columns: var(--hero-columns);
 }
+
+
+/* //-------- MOBILE ---------// */
+
+
+@media (max-width: 767px) {
+  .hero__panels {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    bottom: var(--bar-height);
+  }
+
+  .hero__intro {
+    padding-top: 5rem;
+  }
+}
