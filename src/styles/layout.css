@@ -2,3 +2,24 @@
   width: min(100% - 2rem, var(--container));
   margin-inline: auto;
 }
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__intro {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 4.5rem;
+}
+
+.hero__panels {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: var(--hero-columns);
+}
