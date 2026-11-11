@@ -10,6 +10,7 @@ export const projects = [
     year: 2025,
     image: img1,
     alt: 'Descripción de la imagen',
+    description: 'Environment concept for an abandoned shrine town slowly swallowed by the forest.',
     status: 'available',
   },
   {
@@ -19,6 +20,7 @@ export const projects = [
     year: 2025,
     image: img2,
     alt: 'Descripción de la imagen',
+    description: 'A overgrown research outpost where old transmitters still hum through the leaves.',
     status: 'available',
   },
   {
@@ -28,6 +30,7 @@ export const projects = [
     year: 2025,
     image: img3,
     alt: '',
+    description: 'Character designs for a guild of keepers who guard a dying temple complex.',
     status: 'soon',
   },
   {
@@ -37,6 +40,7 @@ export const projects = [
     year: 2026,
     image: img1,
     alt: '',
+    description: 'Matte painting study of a ruined gateway at the edge of an imaginary city.',
     status: 'soon',
   },
 ]
