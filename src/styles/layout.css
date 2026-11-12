@@ -23,3 +23,32 @@
   display: grid;
   grid-template-columns: var(--hero-columns);
 }
+
+.work {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3.5rem, 7vw, 6rem) var(--space-lg) var(--space-section);
+}
+
+.work > *:not(.grid-lines) {
+  position: relative;
+  z-index: 1;
+}
+
+.work__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .work__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .work__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
