@@ -27,7 +27,7 @@
 .work {
   position: relative;
   overflow: hidden;
-  padding: clamp(6rem, 14vw, 12rem) var(--space-lg) var(--space-section);
+  padding: clamp(3.5rem, 7vw, 6rem) var(--space-lg) var(--space-section);
 }
 
 .work > *:not(.grid-lines) {

@@ -415,3 +415,52 @@
     display: none;
   }
 }
+
+.exif {
+  overflow: hidden;
+  border-block: 1px solid var(--color-line);
+  background: var(--color-bg);
+  font-family: var(--font-mono);
+  font-size: var(--text-ui);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+.exif__track {
+  display: flex;
+  width: max-content;
+  padding-block: 0.7em;
+  animation: exif-scroll 45s linear infinite;
+}
+
+.exif__group {
+  display: flex;
+  flex: none;
+}
+
+.exif__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1em;
+  padding-right: 2.5em;
+  white-space: nowrap;
+}
+
+.exif__sep {
+  width: 0.45em;
+  height: 0.45em;
+  background: var(--color-accent);
+}
+
+@keyframes exif-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .exif__track {
+    animation: none;
+  }
+}
